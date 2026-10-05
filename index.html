@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rubini Jewels | Earrings, Necklaces, Chokers & Rings</title>
+  <meta name="description" content="Elegant jewellery with free shipping and 2-day delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="promo">Free shipping on every order &nbsp;|&nbsp; Delivered in 2 days</p>
+
+  <header class="top">
+    <a class="logo" href="#home">Rubini</a>
+    <nav aria-label="Main">
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">New festive collection</p>
+        <h1>Jewellery that makes every moment shine.</h1>
+        <p class="lead">Earrings, necklaces, chokers and rings crafted to be worn and remembered. Free shipping, delivered in 2 days.</p>
+        <a class="btn" href="#shop">Shop jewellery</a>
+        <a class="btn ghost" href="#collections">Explore collections</a>
+      </div>
+      <div class="ring-art" aria-hidden="true">
+        <div class="ring"><i class="gem"></i></div>
+        <b class="sp s1"></b><b class="sp s2"></b><b class="sp s3"></b><b class="sp s4"></b>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <h2>Our collections</h2>
+      <div class="cats">
+        <button data-go="earrings"><span>◆</span>Earrings</button>
+        <button data-go="necklaces"><span>◆</span>Necklaces</button>
+        <button data-go="chokers"><span>◆</span>Chokers</button>
+        <button data-go="rings"><span>◆</span>Rings</button>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="shop-head">
+        <h2>Shop all jewellery</h2>
+        <label class="sort">Sort by
+          <select id="sort">
+            <option value="def">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+      <div class="filters" role="group" aria-label="Categories">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="earrings">Earrings</button>
+        <button class="chip" data-filter="necklaces">Necklaces</button>
+        <button class="chip" data-filter="chokers">Chokers</button>
+        <button class="chip" data-filter="rings">Rings</button>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section class="delivery" id="delivery">
+      <div><h3>2-day delivery</h3><p>Order today and receive it within 2 days.</p></div>
+      <div><h3>Free shipping</h3><p>No delivery charge on any order.</p></div>
+      <div><h3>Gift ready</h3><p>Every piece arrives in a gift box.</p></div>
+    </section>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" hidden>
+    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">Close</button></div>
+    <ul id="cartItems"></ul>
+    <p>Total: <strong id="cartTotal">₹0</strong></p>
+    <p class="note">Shipping: ₹0 (free). Delivery in 2 days.</p>
+    <button class="btn full" id="checkout">Place order</button>
+  </aside>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mName">
+      <button class="modal-x" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-art" id="mArt"></div>
+      <div class="modal-info">
+        <span class="kind" id="mKind"></span>
+        <h2 id="mName"></h2>
+        <p id="mDesc"></p>
+        <p class="price" id="mPrice"></p>
+        <p class="metal-label">Choose metal</p>
+        <div class="metals" id="mMetals"></div>
+        <button class="btn full" id="mAdd">Add to cart</button>
+        <p class="note">Free shipping. Delivered in 2 days.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div>
+      <h3>Rubini Jewels</h3>
+      <p>Open daily, 10 AM to 9 PM</p>
+    </div>
+    <form id="contactForm">
+      <h3>Send us a message</h3>
+      <label>Name <input type="text" id="name" required></label>
+      <label>Message <textarea id="msg" rows="3" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p id="formMsg" role="status"></p>
+    </form>
+  </footer>
+  <p class="copy">© 2026 Rubini Jewels.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
